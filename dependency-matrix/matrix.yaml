@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: explore-jenkinsx
+  repo: node5
+  url: https://github.com/explore-jenkinsx/node5.git
+  version: ""
+  versionURL: ""

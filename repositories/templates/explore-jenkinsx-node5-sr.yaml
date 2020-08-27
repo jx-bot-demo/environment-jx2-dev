@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: explore-jenkinsx
+    provider: github
+    repository: node5
+  name: explore-jenkinsx-node5
+spec:
+  description: Imported application for explore-jenkinsx/node5
+  httpCloneURL: https://github.com/explore-jenkinsx/node5.git
+  org: explore-jenkinsx
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: node5
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/explore-jenkinsx/node5.git
