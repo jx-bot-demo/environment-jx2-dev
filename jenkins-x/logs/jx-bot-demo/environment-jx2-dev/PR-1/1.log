@@ -1,0 +1,45 @@
+
+Showing logs for build [32mjx-bot-demo-environment-jx2-dev-n26mx-1[0m stage [32mpr-checks[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1598527940.5570934,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mjx-bot-demo-environment-jx2-dev-n26mx-1[0m stage [32mpr-checks[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mjx-bot-demo-environment-jx2-dev-n26mx-1[0m stage [32mpr-checks[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mjx-bot-demo-environment-jx2-dev-n26mx-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-jx-bot-demo-environment-jx2-dev-n26mx-knjrq[0m
+{"level":"info","ts":1598527986.1213374,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/***********/environment-**2-dev.git @ master in path /workspace/source"}
+{"level":"warn","ts":1598527986.121433,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1598527986.197618,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mjx-bot-demo-environment-jx2-dev-n26mx-1[0m stage [32mpr-checks[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mjx-bot-demo-environment-jx2-dev-n26mx-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:0cefcd8d4ea17205b33e5e8e2caeaa3b4296a4d2,1:219c7d0009a42ff8ecb6291d08518f5e5887ecb1
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 219c7d0009a42ff8ecb6291d08518f5e5887ecb1: 0cefcd8d4ea17205b33e5e8e2caeaa3b4296a4d2:
+DEBUG: ran git fetch --unshallow origin 219c7d0009a42ff8ecb6291d08518f5e5887ecb1: 0cefcd8d4ea17205b33e5e8e2caeaa3b4296a4d2: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git reset --hard 0cefcd8d4ea17205b33e5e8e2caeaa3b4296a4d2
+DEBUG: ran git reset --hard 0cefcd8d4ea17205b33e5e8e2caeaa3b4296a4d2 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git merge 219c7d0009a42ff8ecb6291d08518f5e5887ecb1
+DEBUG: ran git merge 219c7d0009a42ff8ecb6291d08518f5e5887ecb1 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 0cefcd8d4ea17205b33e5e8e2caeaa3b4296a4d2..HEAD
+Merged SHA 219c7d0009a42ff8ecb6291d08518f5e5887ecb1 with commit message 'chore(deps): bump https://github.com/explore-jenkinsx/node5.git' into base branch master
+
+Showing logs for build [32mjx-bot-demo-environment-jx2-dev-n26mx-1[0m stage [32mpr-checks[0m and container [32mstep-verify-parameters[0m
+error: resolve the secrets URIs: replacing secrets URIs: replacing vault paths in *****User:
+  password: local:heronbird/*****User:password
+  username: *****
+enableDocker: false
+pipelineUser:
+  email: blskype@nclasters.org
+  token: local:heronbird/pipelineUser:token
+  username: ***********
+prow:
+  hmacToken: local:heronbird/prow:hmacToken
+: unable to find "password" in secret at "heronbird/*****User"
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-verify-parameters'. The execution of the pipeline has stopped.[0m
